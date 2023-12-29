@@ -1,0 +1,12 @@
+{
+  "editor.fontSize": 20,
+  "editor.mouseWheelZoom": true,
+  "screencastMode.fontSize": 66,
+  "debug.console.fontSize": 18,
+  "scm.inputFontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "chat.editor.fontSize": 16,
+  "markdown.preview.fontSize": 16,
+  "javascript.inlayHints.parameterNames.enabled": "literals",
+  "terminal.integrated.tabStopWidth": 4
+}
