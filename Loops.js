@@ -126,5 +126,21 @@ fruits.color = ["red", "blue", "black"];
 // for (let index = 0; index < fruits.length; index++) {
 //   console.log(fruits[index]); // apple, banana, tomato, cherry
 // }
+
 ////------------------------------------------------
+
 // for ... of
+// for...in iterates over property names, for...of iterates over property values
+/*
+for (const iterator of fruits) {
+  console.log(iterator); // apple, banana, tomato, cherry
+}
+*/
+
+// simultaneously loop over the keys and values
+for (const [key, value] in Object.entries(fruits)) {
+  //console.log(key, " -> ", value);
+}
+for (const [key, value] of Object.entries(fruits)) {
+  //console.log(key, " -> ", value);
+}
