@@ -139,8 +139,50 @@ for (const iterator of fruits) {
 
 // simultaneously loop over the keys and values
 for (const [key, value] in Object.entries(fruits)) {
-  //console.log(key, " -> ", value);
+  //console.log(key+ " -> "+ value);
 }
+
+/*
+0  ->  undefined
+1  ->  undefined
+2  ->  undefined
+3  ->  undefined
+4  ->  undefined
+*/
+
 for (const [key, value] of Object.entries(fruits)) {
-  //console.log(key, " -> ", value);
+  //console.log(key+ " -> "+ value);
 }
+/*
+0  ->  apple
+1  ->  banana
+2  ->  tomato
+3  ->  cherry
+color  ->  [ 'red', 'blue', 'black' ]
+*/
+
+// 'in' only returns name/feature/attr/key of Object
+// not value of this Object
+const obj = { a: "bir", b: "iki", c: "uc", d: "dort" };
+for (const key in obj) {
+  //console.log(key+ " -> "+ obj.key); //--> right side always is 'undefined'
+  //console.log(key+ " -> "+ obj[key]); // works as expected
+};
+/* output for 2th log
+a  ->  bir
+b  ->  iki
+c  ->  uc
+d  ->  dort
+*/
+
+/*
+CANNOT use plain object with forof loop
+use with "Object.keys(), Object.values() or Object.entries()"
+*/
+for (const key of Object.keys(obj)) {
+  //console.log(key+ " -> "+ obj.key); //--> right side always is 'undefined'
+  //console.log(key+ " -> "+ obj[key]); // works as expected
+}
+//console.log(obj.a); // bir
+//console.log(obj["a"]); // bir
+//console.log(typeof Object.keys(obj));
