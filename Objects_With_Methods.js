@@ -93,4 +93,61 @@ let hour = 0;
 let min = 0;
 let second = 0;
 
-console.log(`counter is ${hour}:${min}:${second}`);
+const date = new Date();
+hour = date.getHours();
+min = date.getMinutes();
+second = date.getSeconds();
+
+function f() {
+  if (second < 10) {
+    console.log(`Counter is ${hour}:${min}:0${second}`);
+  } else {
+    console.log(`Counter is ${hour}:${min}:${second}`);
+  }
+
+  second += 1;
+  if (second % 60 == 0) {
+    min++;
+    second = 0;
+  }
+  if (min % 60 == 0) {
+    hour++;
+    min = 0;
+  }
+  setTimeout(f, 1000);
+}
+
+f();
+
+/*
+let hour = 0;
+let min = 0;
+let second = 0;
+
+const date = new Date();
+hour = date.getHours();
+min = date.getMinutes();
+second = date.getSeconds();
+  
+function updateCounter() {
+
+  console.log(`counter is ${hour}:${min}:${second}`);
+
+  // Increment seconds and handle rollover
+  second = (second + 1) % 60;
+  if (second === 0) {
+    min++;
+    if (min === 60) {
+      min = 0;
+      hour++;
+      if (hour === 24) {
+        hour = 0; // Reset hour at midnight
+      }
+    }
+  }
+
+  setTimeout(updateCounter, 1000);
+}
+
+updateCounter();
+*/
